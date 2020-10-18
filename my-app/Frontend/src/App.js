@@ -1,28 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import Home from './Home'
+import Profile from './Profile'
+import Classroom from './Classroom'
+import Shop from './Shop'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  contentStates = {
+    HOME: 'Home',
+    PROFILE: 'Profile',
+    CLASSROOM: 'Classroom',
+    SHOP: 'SHOP'
+  }
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      contentType: this.contentStates.HOME
+    }
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <div className={this.state.contentType === this.contentStates.HOME ? "show" : "hide"}>
+          <Home/>
+        </div>
+        <div className={this.state.contentType === this.contentStates.PROFILE ? "show" : "hide"}>
+          <Profile/>
+        </div>
+        <div className={this.state.contentType === this.contentStates.CLASSROOM ? "show" : "hide"}>
+          <Classroom/>
+        </div>
+        <div className={this.state.contentType === this.contentStates.SHOP ? "show" : "hide"}>
+          <Shop/>
+        </div>
+      </div>
+    );
+  }
 }
-
 
 // an example commit 
 export default App;
