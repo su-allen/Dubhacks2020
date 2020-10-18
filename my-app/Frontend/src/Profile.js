@@ -38,7 +38,7 @@ class Profile extends Component {
     render() {
         return (
             <div className="Profile">
-                <img className="profile-picture" src={"profile_picture.png"} alt={"Profile Picture"} onClick={this.pickFrameColor}/>
+                <img className="profile-picture" src={"profile_picture.png"} alt={"Profile Picture"} style={{border: this.props.user.frame_color + " solid 3px"}} onClick={this.pickFrameColor}/>
                 <div className="student-info">
                     <h1 className={"user-name"} style={{color: this.props.user.name_color}}>{this.props.user.name}</h1>
                     <div className="name-color">
