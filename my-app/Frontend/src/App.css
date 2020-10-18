@@ -63,10 +63,15 @@
 
 .StudentListView {
   margin: 8px;
-  padding:5px;
+  padding: 10px;
+  font-size: 24px;
   border-radius: 5px;
   color: #000000;
   background-color: rgb(199, 194, 194);
+}
+
+.Stats {
+  margin: 8px;
 }
 
 .Profile {
