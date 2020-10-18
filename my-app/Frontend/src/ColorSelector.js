@@ -7,6 +7,7 @@ class ColorSelector extends Component {
     }
 
     chooseColor(color) {
+        this.props.updater(color);
         console.log(color);
     }
 

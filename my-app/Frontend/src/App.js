@@ -17,152 +17,7 @@ const Colors = {
   DEFAULT: null,
 };
 
-var dummy_data = [
-  {
-    name: "Bob Ross",
-    ranking: 1,
-    total_points: 1000,
-    points_available: 1000,
-    badges: null,
-    badge_collection: null,
-    frame_color: Colors.LIGHTGREEN,
-    frame_collection: null,
-    name_color: Colors.BLACK,
-    name_collection: null,
-  },
-  {
-    name: "Roy Liu",
-    ranking: 2,
-    total_points: 900,
-    points_available: 900,
-    badges: ["℗", "♫"],
-    badge_collection: ["℗", "♫"],
-    frame_color: Colors.ALICEBLUE,
-    frame_collection: [Colors.ALICEBLUE, Colors.DEFAULT],
-    name_color: Colors.LIGHTGREEN,
-    name_collection: [Colors.LIGHTGREEN, Colors.DEFAULT],
-  },
-  {
-    name: "George Curious",
-    ranking: 3,
-    total_points: 840,
-    points_available: 840,
-    badges: null,
-    badge_collection: null,
-    frame_color: Colors.HOTPINK,
-    frame_collection: [Colors.WHITE, Colors.DEFAULT],
-    name_color: null,
-    name_collection: [Colors.DEFAULT],
-  },
-  {
-    name: "Bob Sponge",
-    ranking: 4,
-    total_points: 810,
-    points_available: 810,
-    badges: null,
-    badge_collection: null,
-    frame_color: Colors.GOLD,
-    frame_collection: [Colors.BLACK, Colors.DEFAULT],
-    name_color: Colors.ALICEBLUE,
-    name_collection: [Colors.DEFAULT],
-  },
-  {
-    name: "Bruce Wayne",
-    ranking: 5,
-    total_points: 800,
-    points_available: 800,
-    badges: null,
-    badge_collection: null,
-    frame_color: Colors.BLACK,
-    frame_collection: [Colors.BLACK, Colors.DEFAULT],
-    name_color: Colors.HOTPINK,
-    name_collection: [Colors.DEFAULT],
-  },
-  {
-    name: "Sun WuKong",
-    ranking: 6,
-    total_points: 720,
-    points_available: 720,
-    badges: null,
-    badge_collection: null,
-    frame_color: Colors.BISQUE,
-    frame_collection: [Colors.BLACK, Colors.DEFAULT],
-    name_color: Colors.BLACK,
-    name_collection: [Colors.DEFAULT],
-  },
-  {
-    name: "James Bonds",
-    ranking: 7,
-    total_points: 700,
-    points_available: 700,
-    badges: null,
-    badge_collection: null,
-    frame_color: Colors.BLACK,
-    frame_collection: [Colors.BLACK, Colors.DEFAULT],
-    name_color: Colors.WHITE,
-    name_collection: [Colors.DEFAULT],
-  },
-  {
-    name: "Saitama Saitama",
-    ranking: 8,
-    total_points: 0,
-    points_available: 0,
-    badges: null,
-    badge_collection: null,
-    frame_color: Colors.GOLD,
-    frame_collection: [Colors.BLACK, Colors.DEFAULT],
-    name_color: Colors.INDIGO,
-    name_collection: [Colors.DEFAULT],
-  },
-  {
-    name: "Ariana Grande",
-    ranking: 9,
-    total_points: 0,
-    points_available: 0,
-    badges: null,
-    badge_collection: null,
-    frame_color: Colors.HOTPINK,
-    frame_collection: [Colors.BLACK, Colors.DEFAULT],
-    name_color: Colors.WHITE,
-    name_collection: [Colors.DEFAULT],
-  },
-  {
-    name: "Naruto Uzumaki",
-    ranking: 10,
-    total_points: 0,
-    points_available: 0,
-    badges: null,
-    badge_collection: null,
-    frame_color: Colors.WHITE,
-    frame_collection: [Colors.BLACK, Colors.DEFAULT],
-    name_color: Colors.BLACK,
-    name_collection: [Colors.DEFAULT],
-  },
-  {
-    name: "Luffy D. Monkey",
-    ranking: 11,
-    total_points: 0,
-    points_available: 0,
-    badges: null,
-    badge_collection: null,
-    frame_color: Colors.WHITE,
-    frame_collection: [Colors.BLACK, Colors.DEFAULT],
-    name_color: Colors.BLACK,
-    name_collection: [Colors.DEFAULT],
-  },
-  {
-    name: "Captain Crunch",
-    ranking: 12,
-    total_points: 0,
-    points_available: 0,
-    badges: null,
-    badge_collection: null,
-    frame_color: Colors.WHITE,
-    frame_collection: [Colors.BLACK, Colors.DEFAULT],
-    name_color: Colors.BLACK,
-    name_collection: [Colors.DEFAULT],
-  },
-];
+var dummy_data = require("./testdata.json");
 
 class App extends Component {
   contentStates = {
@@ -245,6 +100,7 @@ class App extends Component {
     this.setState({
       user: {...this.state.user, name_color: color}
     });
+    console.log("app " + this.state.user.name_color);
   }
 
   render() {
@@ -261,7 +117,7 @@ class App extends Component {
           <Home />
         </div>
         <div className={this.state.contentType === this.contentStates.PROFILE ? "show" : "hide"}>
-          <Profile user={this.getUser()} colors={Colors}/>
+          <Profile user={this.getUser()} colors={Colors} updateFrame={this.updateFrameColorTo} updateName={this.updateNameColorTo}/>
         </div>
         <div className={this.state.contentType === this.contentStates.CLASSROOM ? "show" : "hide"}>
           <Classroom students={this.state.students} colors={Colors} />
