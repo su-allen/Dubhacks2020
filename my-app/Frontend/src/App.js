@@ -17,44 +17,7 @@ const Colors = {
   DEFAULT: null,
 };
 
-var dummy_data = [
-  {
-    name: "Bob Ross",
-    ranking: 1,
-    total_points: 500,
-    points_available: 500,
-    badges: null,
-    badge_collection: null,
-    frame_color: Colors.GOLD,
-    frame_collection: null,
-    name_color: Colors.GOLD,
-    name_collection: null,
-  },
-  {
-    name: "Roy Liu",
-    ranking: 2,
-    total_points: 400,
-    points_available: 400,
-    badges: ["℗", "♫"],
-    badge_collection: ["℗", "♫"],
-    frame_color: Colors.ALICEBLUE,
-    frame_collection: [Colors.ALICEBLUE, Colors.DEFAULT],
-    name_color: Colors.LIGHTGREEN,
-    name_collection: [Colors.LIGHTGREEN, Colors.DEFAULT],
-  },
-  {
-    name: "uiL yoR",
-    ranking: 3,
-    total_points: 18,
-    points_available: 18,
-    badges: null,
-    badge_collection: null,
-    frame_color: Colors.WHITE,
-    frame_collection: [Colors.WHITE, Colors.DEFAULT],
-    name_color: null,
-    name_collection: [Colors.DEFAULT],
-  },
-];
+var dummy_data = require("./testdata.json");
 
 class App extends Component {
   contentStates = {
