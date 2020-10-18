@@ -112,3 +112,53 @@
   margin-top: 64px;
   margin-left: 64px;
 }
+
+.ColorSelector {
+  position: absolute;
+  border: black solid 2px;
+  width: 40vw;
+  height: 50vh;
+  left: 30vw;
+  top: 25vh;
+  background: lavenderblush;
+  z-index: 100;
+  border-radius: 15px;
+}
+
+.darken {
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: black;
+  width: 100vw;
+  height: 100vh;
+  opacity: 25%;
+  z-index: 99;
+}
+
+.color-options {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.color-option {
+  width: 8vw;
+  height: 8vw;
+  margin: 0.85vw;
+  border: black solid 2px;
+  border-radius: 50%;
+}
+
+.color-option:hover {
+  cursor: pointer;
+}
+
+.profile-picture:hover {
+  cursor: pointer;
+}
+
+.color-selector:hover {
+  cursor:pointer;
+}

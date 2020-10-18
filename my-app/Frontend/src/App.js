@@ -27,7 +27,7 @@ var dummy_data = [
     badge_collection: null,
     frame_color: null,
     frame_collection: null,
-    name_color: "LightGreen",
+    name_color: Colors.GOLD,
     name_collection: null,
   },
   {
@@ -126,7 +126,7 @@ class App extends Component {
           <Home />
         </div>
         <div className={this.state.contentType === this.contentStates.PROFILE ? "show" : "hide"}>
-          <Profile user={this.getUser()}/>
+          <Profile user={this.getUser()} colors={Colors}/>
         </div>
         <div className={this.state.contentType === this.contentStates.CLASSROOM ? "show" : "hide"}>
           <Classroom students={this.state.students} colors={this.Colors}/>
