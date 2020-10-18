@@ -23,7 +23,7 @@ var dummy_data = [
     ranking: 1,
     total_points: 500,
     points_available: 500,
-    badges: null, 
+    badges: null,
     badge_collection: null,
     frame_color: null,
     frame_collection: null,
@@ -33,9 +33,9 @@ var dummy_data = [
   {
     name: "Roy Liu",
     ranking: 2,
-    total_points: 66,
-    points_available: 16,
-    badges: ["℗", "♫"], 
+    total_points: 400,
+    points_available: 400,
+    badges: ["℗", "♫"],
     badge_collection: ["℗", "♫"],
     frame_color: Colors.ALICEBLUE,
     frame_collection: [Colors.ALICEBLUE, Colors.DEFAULT],
@@ -47,7 +47,7 @@ var dummy_data = [
     ranking: 3,
     total_points: 18,
     points_available: 18,
-    badges: null, 
+    badges: null,
     badge_collection: null,
     frame_color: Colors.WHITE,
     frame_collection: [Colors.WHITE, Colors.DEFAULT],
@@ -69,6 +69,7 @@ class App extends Component {
     this.state = {
       contentType: this.contentStates.HOME,
       students: this.getStudents(),
+      me: this.getMe(),
     }
   }
 
@@ -78,7 +79,7 @@ class App extends Component {
     return dummy_data;
   }
 
-  // Return this student
+  // Return this student (whoever is logged in)
   getMe = () => {
     // TODO: GET request to database to get THIS student
     return dummy_data[1];
@@ -112,6 +113,14 @@ class App extends Component {
     });
   }
 
+  // Triggered when a shop buy button is clicked
+  handleShopBuy = (type, color) => {
+    console.log("PURCHASED " + type, color);
+    this.setState({
+      me: { ...this.state.me, [type]: color, points_available: (this.state.points_available - 100) },
+    });
+  }
+
   render() {
     return (
       <div className="App">
@@ -120,6 +129,7 @@ class App extends Component {
           <button onClick={this.viewMyProfile} className={this.state.contentType === this.contentStates.PROFILE ? 'selected' : ''} disabled={this.state.contentType === this.contentStates.PROFILE}>My Profile</button>
           <button onClick={this.viewMyClassroom} className={this.state.contentType === this.contentStates.CLASSROOM ? 'selected' : ''} disabled={this.state.contentType === this.contentStates.CLASSROOM}>Classroom</button>
           <button onClick={this.viewShop} className={this.state.contentType === this.contentStates.SHOP ? 'selected' : ''} disabled={this.state.contentType === this.contentStates.SHOP}>Shop</button>
+        <p style={{float: "right"}}>{`Points Available: ${this.state.me.points_available}`}</p>
         </div>
         <div className={this.state.contentType === this.contentStates.HOME ? "show" : "hide"}>
           <Home />
@@ -128,10 +138,10 @@ class App extends Component {
           <Profile />
         </div>
         <div className={this.state.contentType === this.contentStates.CLASSROOM ? "show" : "hide"}>
-          <Classroom students={this.state.students} colors={this.Colors}/>
+          <Classroom students={this.state.students} colors={Colors} />
         </div>
         <div className={this.state.contentType === this.contentStates.SHOP ? "show" : "hide"}>
-          <Shop />
+          <Shop me={this.state.me} colors={Colors} handleShopBuy={this.handleShopBuy} />
         </div>
       </div>
     );
