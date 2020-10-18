@@ -123,7 +123,7 @@ class App extends Component {
     }
 
     this.setState({
-      me: { ...this.state.user, [type]: (this.state.user[type] ? [...this.state.user[type], color] : [color]), points_available: this.state.user.points_available - 100 },
+      user: { ...this.state.user, [type]: (this.state.user[type] ? [...this.state.user[type], color] : [color]), points_available: this.state.user.points_available - 100 },
     });
   }
 
