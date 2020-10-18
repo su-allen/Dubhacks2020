@@ -127,6 +127,18 @@ class App extends Component {
     });
   }
 
+  updateFrameColorTo = (color) => {
+    this.setState({
+      user: {...this.state.user, frame_color: color}
+    });
+  }
+
+  updateNameColorTo = (color) => {
+    this.setState({
+      user: {...this.state.user, name_color: color}
+    });
+  }
+
   render() {
     return (
       <div className="App">
