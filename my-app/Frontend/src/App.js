@@ -71,6 +71,7 @@ class App extends Component {
       students: this.getStudents(),
       me: this.getUser(),
     }
+    console.log(this.state.me)
   }
 
   // Return a list of all the students to be displayed in the Classroom
@@ -116,8 +117,14 @@ class App extends Component {
   // Triggered when a shop buy button is clicked
   handleShopBuy = (type, color) => {
     console.log("PURCHASED " + type, color);
+    if (type === "frame_color") {
+      type = "frame_collection";
+    } else {
+      type = "name_collection";
+    }
+
     this.setState({
-      me: { ...this.state.me, [type]: color, points_available: (this.state.points_available - 100) },
+      me: { ...this.state.me, [type]: (this.state.me[type] ? [...this.state.me[type], color] : [color]), points_available: this.state.me.points_available - 100 },
     });
   }
 

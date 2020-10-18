@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import ShopItem from './ShopItem';
 
 /**
@@ -15,8 +15,8 @@ class Shop extends Component {
     getAllShopItems = () => {
         var shop_items = [];
         Object.values(this.props.colors).forEach((color) => {
-            shop_items.push({color: color, type: "frame_color"});
-            shop_items.push({color: color, type: "name_color"});
+            shop_items.push({ color: color, type: "frame_color" });
+            shop_items.push({ color: color, type: "name_color" });
         });
         return shop_items;
     }
@@ -38,7 +38,7 @@ class Shop extends Component {
             <div className="Shop">
                 {this.getAllShopItems().map((shop_item) => {
                     if (shop_item.color) {
-                        return(<ShopItem color={shop_item.color} type={shop_item.type} handleShopBuy={this.props.handleShopBuy} disabled={this.checkDisabled(shop_item.type, shop_item.color)}></ShopItem>);
+                        return (<ShopItem me={this.props.me} color={shop_item.color} type={shop_item.type} handleShopBuy={this.props.handleShopBuy} disabled={this.checkDisabled(shop_item.type, shop_item.color)}></ShopItem>);
                     }
                 })}
             </div>
