@@ -1,0 +1,40 @@
+
+ [
+    {
+      "name": "Bob Ross",
+      "ranking": 1,
+      "total_points": 600,
+      "points_available": 600,
+      "badges": null,
+      "badge_collection": null,
+      "frame_color": "Black",
+      "frame_collection": ["Black", null],
+      "name_color": "Gold",
+      "name_collection": ["Colors", null]
+    },
+    {
+        "name": "Roy Liu",
+        "ranking": 2,
+        "total_points": 500,
+        "points_available": 500,
+        "badges": null,
+        "badge_collection": null,
+        "frame_color": "AliceBlue",
+        "frame_collection": ["AliceBlue", null],
+        "name_color": "Gold",
+        "name_collection": ["Gold", null]
+    },
+    {
+        "name": "Sam Yak",
+        "ranking": 3,
+        "total_points": 450,
+        "points_available": 450,
+        "badges": null,
+        "badge_collection": null,
+        "frame_color": "White",
+        "frame_collection": ["White", null],
+        "name_color": "Black",
+        "name_collection": ["Black", null]
+    }
+]   
+
