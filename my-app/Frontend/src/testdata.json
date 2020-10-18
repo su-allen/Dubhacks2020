@@ -21,7 +21,7 @@
         "badge_collection": null,
         "frame_color": "AliceBlue",
         "frame_collection": ["AliceBlue", null],
-        "name_color": "Gold",
+        "name_color": "lightgreen",
         "name_collection": ["Gold", null]
     },
     {
@@ -45,7 +45,7 @@
         "badge_collection": null,
         "frame_color": "GOLD",
         "frame_collection": ["White", null],
-        "name_color": "ALICEBLUE",
+        "name_color": "darkred",
         "name_collection": ["Black", null]
     },
     {
@@ -81,19 +81,7 @@
         "badge_collection": null,
         "frame_color": "BLACK",
         "frame_collection": ["White", null],
-        "name_color": "WHITE",
-        "name_collection": ["Black", null]
-    },
-    {
-        "name": "George Curious",
-        "ranking": 3,
-        "total_points": 840,
-        "points_available": 840,
-        "badges": null,
-        "badge_collection": null,
-        "frame_color": "HOTPINK",
-        "frame_collection": ["White", null],
-        "name_color": "null",
+        "name_color": "orange",
         "name_collection": ["Black", null]
     },
     {
@@ -117,7 +105,7 @@
         "badge_collection": null,
         "frame_color": "HOTPINK",
         "frame_collection": ["White", null],
-        "name_color": "WHITE",
+        "name_color": "lavendar",
         "name_collection": ["Black", null]
     },
     {

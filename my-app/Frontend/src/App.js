@@ -6,14 +6,14 @@ import Classroom from './Classroom'
 import Shop from './Shop'
 
 const Colors = {
-  ALICEBLUE: "AliceBlue",
-  BISQUE: "Bisque",
+  ALICEBLUE: "orange",
+  BISQUE: "darkred",
   BLACK: "Black",
   GOLD: "Gold",
   INDIGO: "Indigo",
   LIGHTGREEN: "LightGreen",
   HOTPINK: "HotPink",
-  WHITE: "White",
+  WHITE: "lavender",
   DEFAULT: null,
 };
 
@@ -107,11 +107,16 @@ class App extends Component {
     return (
       <div className="App">
         <div className="navigation-bar">
-          <button onClick={this.viewHome} className={this.state.contentType === this.contentStates.HOME ? 'selected' : ''} disabled={this.state.contentType === this.contentStates.HOME}>Home</button>
-          <button onClick={this.viewMyProfile} className={this.state.contentType === this.contentStates.PROFILE ? 'selected' : ''} disabled={this.state.contentType === this.contentStates.PROFILE}>My Profile</button>
-          <button onClick={this.viewMyClassroom} className={this.state.contentType === this.contentStates.CLASSROOM ? 'selected' : ''} disabled={this.state.contentType === this.contentStates.CLASSROOM}>Classroom</button>
-          <button onClick={this.viewShop} className={this.state.contentType === this.contentStates.SHOP ? 'selected' : ''} disabled={this.state.contentType === this.contentStates.SHOP}>Shop</button>
-        <p style={{float: "right"}}>{`Points Available: ${this.state.user.points_available}`}</p>
+          <div className="app-name"><h1>Edconomy</h1></div>
+          <div className="nav-buttons">
+            <button onClick={this.viewHome} className={this.state.contentType === this.contentStates.HOME ? 'selected' : ''} disabled={this.state.contentType === this.contentStates.HOME}>Home</button>
+            <button onClick={this.viewMyProfile} className={this.state.contentType === this.contentStates.PROFILE ? 'selected' : ''} disabled={this.state.contentType === this.contentStates.PROFILE}>My Profile</button>
+            <button onClick={this.viewMyClassroom} className={this.state.contentType === this.contentStates.CLASSROOM ? 'selected' : ''} disabled={this.state.contentType === this.contentStates.CLASSROOM}>Classroom</button>
+            <button onClick={this.viewShop} className={this.state.contentType === this.contentStates.SHOP ? 'selected' : ''} disabled={this.state.contentType === this.contentStates.SHOP}>Shop</button>
+          </div>
+          <div className="point-display">
+            <p>{`Points Available: ${this.state.user.points_available}`}</p>
+          </div>
         </div>
         <div className={this.state.contentType === this.contentStates.HOME ? "show" : "hide"}>
           <Home />

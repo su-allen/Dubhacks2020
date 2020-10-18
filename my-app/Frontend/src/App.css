@@ -30,19 +30,32 @@
   color: #61dafb;
 }
 
+.app-name {
+  padding-left: 64px;
+}
+
+.point-display {
+  padding-right: 50px;
+  padding-top: 20px;
+}
+
 .navigation-bar {
   background-color: rgb(255, 229, 189);
-  align-content: center;
+  justify-items: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .navigation-bar button {
   color: #000000;
-  padding: 5px;
-  margin: 8px;
+  padding: 15px;
+  margin: 10px;
   font-size: 24px;
   border-radius: 8px;
   background-color: #ffffff;
   outline: none;
+  height: 80%;
+  transition: 0.5s;
 }
 
 .navigation-bar button:hover {
@@ -61,6 +74,9 @@
 .Classroom {
   margin-left: 16px;
   margin-right: 16px;
+  padding-top: 1%;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
 .StudentListView {
@@ -69,7 +85,45 @@
   font-size: 24px;
   border-radius: 5px;
   color: #000000;
-  background-color: rgb(199, 194, 194);
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+}
+
+.StudentListView1 {
+  margin: 8px;
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 5px;
+  color: #000000;
+  background-color: rgb(218,165,32);
+  display: flex;
+  justify-content: space-between;
+  background-image: linear-gradient(15deg, rgb(218, 165, 32), rgb(234, 207, 140), rgb(218, 165, 32));
+}
+
+.StudentListView2 {
+  margin: 8px;
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 5px;
+  color: #000000;
+  background-color: #C0C0C0;
+  display: flex;
+  justify-content: space-between;
+  background-image: linear-gradient(15deg, #C0C0C0, #dddddd, #C0C0C0);
+}
+
+.StudentListView3 {
+  margin: 8px;
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 5px;
+  color: #000000;
+  background-color: #b08d57;
+  display: flex;
+  justify-content: space-between;
+  background-image: linear-gradient(15deg, #b08d57, #ffcb80, #b08d57);
 }
 
 .Stats {
@@ -77,11 +131,15 @@
 }
 
 .Shop {
-  margin: 2px;
   align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 15%;
+  padding: 3% 12%;
 }
 
 .ShopItem_Round {
+  height: 128px;
   font-size: 24px;
   margin: 10px;
   border-radius: 50%;
@@ -92,6 +150,7 @@
 }
 
 .ShopItem_Rect {
+  width: 100%;
   font-size: 24px;
   margin: 10px;
   border-radius: 5px;
@@ -101,16 +160,31 @@
   display: inline-block;
 }
 
+.ShopItem_Rect:hover {
+  cursor: pointer;
+}
+
+.ShopItem_Round:hover {
+  cursor: pointer;
+}
+
 .ShopItem button:hover {
   background: var(--blue-medium);
 }
 
 .ShopItemHolder {
-  display: inline-block;
+  display: flex;
+  width: 192px;
+  justify-content: center;
 }
 
 .Profile {
   display: flex;
+  padding: 5%;
+  margin: 5% 15% 0 15%;
+  background: whitesmoke;
+  box-shadow: 0 0 10px 3px rgba(0,0,0,0.25);
+  border-radius: 25px;
 }
 
 .profile-picture {
@@ -118,8 +192,7 @@
   height: 256px;
   border: black solid 2px;
   border-radius: 50%;
-  margin-left: 128px;
-  margin-top: 64px;
+  transition: 0.25s;
 }
 
 .name-color {
@@ -133,6 +206,7 @@
   border-radius: 50%;
   margin-left: 32px;
   border: black solid 2px;
+  transition: 0.25s;
 }
 
 .user-name {
@@ -144,8 +218,7 @@
 }
 
 .student-info {
-  margin-top: 64px;
-  margin-left: 64px;
+  margin-left: 15%;
 }
 
 .ColorSelector {
@@ -185,16 +258,25 @@
   margin: 0.85vw;
   border: black solid 2px;
   border-radius: 50%;
+  transition: 0.5s;
 }
 
 .color-option:hover {
+  box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.25);
   cursor: pointer;
 }
 
 .profile-picture:hover {
+  box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.25);
   cursor: pointer;
 }
 
 .color-selector:hover {
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
   cursor:pointer;
+}
+
+.Home {
+  padding-left: 15%;
+  padding-right: 15%;
 }
