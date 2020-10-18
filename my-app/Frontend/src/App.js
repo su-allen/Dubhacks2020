@@ -117,7 +117,7 @@ class App extends Component {
           <Home />
         </div>
         <div className={this.state.contentType === this.contentStates.PROFILE ? "show" : "hide"}>
-          <Profile user={this.getUser()} colors={Colors} updateFrame={this.updateFrameColorTo} updateName={this.updateNameColorTo}/>
+          <Profile user={this.state.user} colors={Colors} updateFrame={this.updateFrameColorTo} updateName={this.updateNameColorTo}/>
         </div>
         <div className={this.state.contentType === this.contentStates.CLASSROOM ? "show" : "hide"}>
           <Classroom students={this.state.students} colors={Colors} />

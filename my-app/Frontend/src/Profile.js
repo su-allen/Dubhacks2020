@@ -23,6 +23,7 @@ class Profile extends Component {
     }
 
     pickFrameColor = () => {
+        console.log('clicked frame');
         this.setState({
             mode: this.selectorMode.FRAME
         });
@@ -49,7 +50,7 @@ class Profile extends Component {
                 </div>
                 <div className={this.state.mode === this.selectorMode.NONE ? "hide" : "show"}>
                     <div className={"darken"} onClick={this.closeColorSelector}/>
-                    <ColorSelector colors={this.props.colors} updater={this.state.mode === this.selectorMode.NAME ? this.props.updateName : this.props.updateFrame}/>
+                    <ColorSelector colors={this.props.colors}/>
                 </div>
             </div>
         );

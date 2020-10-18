@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './App.css';
 
 class ShopItem extends Component {
@@ -21,15 +21,15 @@ class ShopItem extends Component {
 
     getInside = () => {
         if (this.props.type === "frame_color") {
-            return(<img src="profile_picture.png" className="ShopItem_Round"></img>);
+            return (<img src="profile_picture.png" className="ShopItem_Round"></img>);
         }
-        return (<p className="ShopItem_Rect" contenteditable={false} style={(this.props.type === "frame_color") ? ((this.props.color === "Black") ? {color: "#b0aeae"} : {color: "black"}) : {color: this.props.color}}>{`${this.props.color} ${this.props.type.replace(/_/g, " ")}`}</p>);
+        return (<p className="ShopItem_Rect" contenteditable={false} style={(this.props.type === "frame_color") ? ((this.props.color === "Black") ? { color: "#b0aeae" } : { color: "black" }) : { color: this.props.color }}>{`${this.props.color} ${this.props.type.replace(/_/g, " ")}`}</p>);
     }
 
     render() {
         return (
             <div className="ShopItemHolder">
-                <button disabled={this.props.disabled} title={this.props.disabled ? (this.alreadyOwned() ? "You already own this item" : "You don't have enough to buy this item. Cost: 100 points") : "Cost: 100 points"} onClick={() => this.purchase(this.props.type, this.props.color)} className={this.props.type === "frame_color" ? "ShopItem_Round" : "ShopItem_Rect"} style={(this.props.type === "frame_color") ? {backgroundColor: this.props.color} : {backgroundColor: "#b0aeae"}}>
+                <button disabled={this.props.disabled} title={this.props.disabled ? (this.alreadyOwned() ? "You already own this item" : "You don't have enough to buy this item. Cost: 100 points") : "Cost: 100 points"} onClick={() => this.purchase(this.props.type, this.props.color)} className={this.props.type === "frame_color" ? "ShopItem_Round" : "ShopItem_Rect"} style={(this.props.type === "frame_color") ? { backgroundColor: this.props.color } : { backgroundColor: "#b0aeae" }}>
                     {this.getInside()}
                 </button>
             </div>
