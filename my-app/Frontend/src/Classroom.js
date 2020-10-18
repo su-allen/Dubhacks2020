@@ -3,11 +3,9 @@ import React, { Component } from 'react';
 class Classroom extends Component {
     constructor(props) {
         super(props);
-        console.log(this.props.students);
     }
 
     getBadges = (student) => {
-        console.log(student.frame_color)
         let out = "";
         if (student.badges) {
             student.badges.forEach(badge => {

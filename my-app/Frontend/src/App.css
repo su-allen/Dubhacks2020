@@ -38,6 +38,7 @@
 
 .navigation-bar {
   background-color: rgb(255, 229, 189);
+  align-content: center;
 }
 
 .navigation-bar button {
@@ -57,8 +58,13 @@
   background-color: #61dafb;
 }
 
+.Home {
+  margin: 16px;
+}
+
 .Classroom {
-  margin: 8px;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 .StudentListView {
@@ -72,6 +78,29 @@
 
 .Stats {
   margin: 8px;
+}
+
+.ShopItem {
+  font-size: 24px;
+  margin: 10px;
+  border-radius: 5px;
+  top: 50%;
+  right: 1%;
+  left: 1%;
+  display: inline-block;
+}
+
+.ShopItem p {
+  padding: 3px;
+  display: inline-block;
+}
+
+.ShopItem button:hover {
+  background: var(--blue-medium);
+}
+
+.ShopItemHolder {
+  display: inline-block;
 }
 
 .Profile {
