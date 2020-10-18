@@ -27,7 +27,7 @@ var dummy_data = [
     badge_collection: null,
     frame_color: null,
     frame_collection: null,
-    name_color: null,
+    name_color: "LightGreen",
     name_collection: null,
   },
   {
