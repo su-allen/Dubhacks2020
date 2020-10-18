@@ -51,7 +51,7 @@ class Profile extends Component {
                 </div>
                 <div className={this.state.mode === this.selectorMode.NONE ? "hide" : "show"}>
                     <div className={"darken"} onClick={this.closeColorSelector}/>
-                    <ColorSelector colors={this.props.colors} updater={this.state.mode === this.selectorMode.NAME ? this.props.updateName : this.props.updateFrame} closer={this.closeColorSelector}/>
+                    <ColorSelector me={this.props.user} mode={this.state.mode} colors={this.props.colors} updater={this.state.mode === this.selectorMode.NAME ? this.props.updateName : this.props.updateFrame} closer={this.closeColorSelector}/>
                 </div>
             </div>
         );
