@@ -103,11 +103,41 @@
   display: inline-block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Profile {
+  display: flex;
+}
+
+.profile-picture {
+  width: 256px;
+  height: 256px;
+  border: black solid 2px;
+  border-radius: 50%;
+  margin-left: 128px;
+  margin-top: 64px;
+}
+
+.name-color {
+  display: flex;
+  align-items: center;
+}
+
+.color-selector {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-left: 32px;
+  border: black solid 2px;
+}
+
+.user-name {
+  display: flex;
+}
+
+.student-info h2 {
+  display: flex;
+}
+
+.student-info {
+  margin-top: 64px;
+  margin-left: 64px;
 }

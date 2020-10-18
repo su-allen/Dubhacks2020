@@ -27,7 +27,7 @@ var dummy_data = [
     badge_collection: null,
     frame_color: null,
     frame_collection: null,
-    name_color: null,
+    name_color: "LightGreen",
     name_collection: null,
   },
   {
@@ -68,8 +68,9 @@ class App extends Component {
     super(props);
     this.state = {
       contentType: this.contentStates.HOME,
+      user: "Bob Ross",
       students: this.getStudents(),
-      me: this.getMe(),
+      me: this.getUser(),
     }
   }
 
@@ -79,10 +80,10 @@ class App extends Component {
     return dummy_data;
   }
 
-  // Return this student (whoever is logged in)
-  getMe = () => {
-    // TODO: GET request to database to get THIS student
-    return dummy_data[1];
+  // Return user data
+  getUser = () => {
+    // TODO: same as above
+    return this.getStudents()[0];
   }
 
   // Triggered when the Home button is selected
@@ -135,7 +136,7 @@ class App extends Component {
           <Home />
         </div>
         <div className={this.state.contentType === this.contentStates.PROFILE ? "show" : "hide"}>
-          <Profile />
+          <Profile user={this.getUser()}/>
         </div>
         <div className={this.state.contentType === this.contentStates.CLASSROOM ? "show" : "hide"}>
           <Classroom students={this.state.students} colors={Colors} />
