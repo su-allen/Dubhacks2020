@@ -20,7 +20,6 @@ class ColorSelector extends Component {
                     {Object.values(this.props.colors).map(c => (
                         <div className={c === this.props.colors.DEFAULT ? 'hide' : 'show'}>
                             <div className={"color-option"} style={{background: c}}  onClick={() => this.chooseColor(c)}/>
-                            <div className={"color-locker"}></div>
                         </div>
                     ))}
                 </div>
