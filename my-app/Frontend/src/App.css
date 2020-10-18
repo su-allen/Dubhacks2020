@@ -80,18 +80,28 @@
   margin: 8px;
 }
 
-.ShopItem {
+.Shop {
+  margin: 2px;
+  align-items: center;
+}
+
+.ShopItem_Round {
   font-size: 24px;
   margin: 10px;
-  border-radius: 5px;
+  border-radius: 50%;
   top: 50%;
   right: 1%;
   left: 1%;
   display: inline-block;
 }
 
-.ShopItem p {
-  padding: 3px;
+.ShopItem_Rect {
+  font-size: 24px;
+  margin: 10px;
+  border-radius: 5px;
+  top: 50%;
+  right: 1%;
+  left: 1%;
   display: inline-block;
 }
 
