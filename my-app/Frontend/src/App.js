@@ -100,10 +100,10 @@ class App extends Component {
     this.setState({
       user: {...this.state.user, name_color: color}
     });
-    console.log("app " + this.state.user.name_color);
   }
 
   render() {
+    console.log("App: " + this.state.user.name_color);
     return (
       <div className="App">
         <div className="navigation-bar">

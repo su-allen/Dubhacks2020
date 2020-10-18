@@ -36,6 +36,7 @@ class Profile extends Component {
     }
 
     render() {
+        console.log("Profile: " + this.props.user.name_color);
         return (
             <div className="Profile">
                 <img className="profile-picture" src={"profile_picture.png"} alt={"Profile Picture"} style={{border: this.props.user.frame_color + " solid 3px"}} onClick={this.pickFrameColor}/>
@@ -50,7 +51,7 @@ class Profile extends Component {
                 </div>
                 <div className={this.state.mode === this.selectorMode.NONE ? "hide" : "show"}>
                     <div className={"darken"} onClick={this.closeColorSelector}/>
-                    <ColorSelector colors={this.props.colors}/>
+                    <ColorSelector colors={this.props.colors} updater={this.state.mode === this.selectorMode.NAME ? this.props.updateName : this.props.updateFrame} closer={this.closeColorSelector}/>
                 </div>
             </div>
         );
