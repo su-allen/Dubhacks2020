@@ -3,7 +3,7 @@
     {
       "name": "Bob Ross",
       "ranking": 1,
-      "total_points": 600,
+      "total_points": 860,
       "points_available": 600,
       "badges": null,
       "badge_collection": null,
@@ -15,7 +15,7 @@
     {
         "name": "Roy Liu",
         "ranking": 2,
-        "total_points": 500,
+        "total_points": 820,
         "points_available": 500,
         "badges": null,
         "badge_collection": null,
@@ -27,7 +27,7 @@
     {
         "name": "George Curious",
         "ranking": 3,
-        "total_points": 840,
+        "total_points": 810,
         "points_available": 840,
         "badges": null,
         "badge_collection": null,
@@ -39,7 +39,7 @@
     {
         "name": "Bob Sponge",
         "ranking": 4,
-        "total_points": 810,
+        "total_points": 760,
         "points_available": 810,
         "badges": null,
         "badge_collection": null,
@@ -51,7 +51,7 @@
     {
         "name": "Bruce Wayne",
         "ranking": 5,
-        "total_points": 800,
+        "total_points": 720,
         "points_available": 800,
         "badges": null,
         "badge_collection": null,
@@ -63,7 +63,7 @@
     {
         "name": "Sun WuKong",
         "ranking": 6,
-        "total_points": 720,
+        "total_points": 600,
         "points_available": 720,
         "badges": null,
         "badge_collection": null,
@@ -75,7 +75,7 @@
     {
         "name": "James Bond",
         "ranking": 7,
-        "total_points": 700,
+        "total_points": 550,
         "points_available": 700,
         "badges": null,
         "badge_collection": null,
@@ -87,8 +87,8 @@
     {
         "name": "Saitama Saitama",
         "ranking": 8,
-        "total_points": 0,
-        "points_available": 0,
+        "total_points": 520,
+        "points_available": 520,
         "badges": null,
         "badge_collection": null,
         "frame_color": "GOLD",
@@ -99,8 +99,8 @@
     {
         "name": "Ariana Grande",
         "ranking": 9,
-        "total_points": 0,
-        "points_available": 0,
+        "total_points": 510,
+        "points_available": 510,
         "badges": null,
         "badge_collection": null,
         "frame_color": "HOTPINK",
@@ -111,8 +111,8 @@
     {
         "name": "Naruto Uzumaki",
         "ranking": 10,
-        "total_points": 0,
-        "points_available": 0,
+        "total_points": 510,
+        "points_available": 510,
         "badges": null,
         "badge_collection": null,
         "frame_color": "WHITE",
@@ -123,8 +123,8 @@
     {
         "name": "Luffy D. Monkey",
         "ranking": 11,
-        "total_points": 0,
-        "points_available": 0,
+        "total_points": 430,
+        "points_available": 430,
         "badges": null,
         "badge_collection": null,
         "frame_color": "WHITE",
@@ -135,8 +135,8 @@
     {
         "name": "Captain Crunch",
         "ranking": 12,
-        "total_points": 0,
-        "points_available": 0,
+        "total_points": 410,
+        "points_available": 410,
         "badges": null,
         "badge_collection": null,
         "frame_color": "WHITE",
