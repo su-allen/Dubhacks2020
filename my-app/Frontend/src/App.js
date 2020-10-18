@@ -17,6 +17,7 @@ class App extends Component {
     super(props);
     this.state = {
       contentType: this.contentStates.HOME,
+      user: "Bob Ross",
       students: this.getStudents(),
     }
   }
@@ -27,16 +28,25 @@ class App extends Component {
       {
         name: "Bob Ross",
         ranking: 1,
+        color: "blue",
         total_points: 500,
-        badges: null, 
+        balance: 480,
+        badges: [],
       },
       {
         name: "Roy Liu",
         ranking: 2,
+        color: "black",
         total_points: 66,
+        balance: 25,
         badges: ["℗", "♫"], 
       }
     ];
+  }
+
+  getUser = () => {
+    // TODO: same as above
+    return this.getStudents()[0];
   }
 
   viewHome = () => {
@@ -76,7 +86,7 @@ class App extends Component {
           <Home />
         </div>
         <div className={this.state.contentType === this.contentStates.PROFILE ? "show" : "hide"}>
-          <Profile />
+          <Profile user={this.getUser()}/>
         </div>
         <div className={this.state.contentType === this.contentStates.CLASSROOM ? "show" : "hide"}>
           <Classroom students={this.state.students}/>
