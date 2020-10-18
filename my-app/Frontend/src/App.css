@@ -36,6 +36,23 @@
   color: #61dafb;
 }
 
+.navigation-bar button {
+  color: #000000;
+  padding: 5px;
+  margin: 5px;
+  font-size: 24px;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.navigation-bar button:hover {
+  background: #327ba8;
+}
+
+.navigation-bar button.selected {
+  background-color: #61dafb;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
