@@ -152,9 +152,9 @@
   position: absolute;
   border: black solid 2px;
   width: 40vw;
-  height: 50vh;
+  height: 60vh;
   left: 30vw;
-  top: 25vh;
+  top: 20vh;
   background: lavenderblush;
   z-index: 100;
   border-radius: 15px;
@@ -178,12 +178,15 @@
   flex-wrap: wrap;
   padding: 0;
 }
+
 .color-option {
   width: 8vw;
   height: 8vw;
   margin: 0.85vw;
   border: black solid 2px;
   border-radius: 50%;
+  position: absolute;
+  z-index: 100;
 }
 
 .color-option:hover {
@@ -196,4 +199,14 @@
 
 .color-selector:hover {
   cursor:pointer;
+}
+
+.color-locker {
+  z-index:1;
+  width: 8vw;
+  height: 8vw;
+  margin: 0.85vw;
+  border: black solid 2px;
+  border-radius: 1%;
+  background: black;
 }
