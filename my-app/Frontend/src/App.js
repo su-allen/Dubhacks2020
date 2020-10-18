@@ -68,7 +68,6 @@ class App extends Component {
     super(props);
     this.state = {
       contentType: this.contentStates.HOME,
-      user: "Bob Ross",
       students: this.getStudents(),
       me: this.getUser(),
     }
@@ -136,7 +135,7 @@ class App extends Component {
           <Home />
         </div>
         <div className={this.state.contentType === this.contentStates.PROFILE ? "show" : "hide"}>
-          <Profile user={this.getUser()}/>
+          <Profile user={this.state.me}/>
         </div>
         <div className={this.state.contentType === this.contentStates.CLASSROOM ? "show" : "hide"}>
           <Classroom students={this.state.students} colors={Colors} />

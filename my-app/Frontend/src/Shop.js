@@ -23,6 +23,9 @@ class Shop extends Component {
 
     // Returns true if the student already owns the item.
     checkDisabled = (type, color) => {
+        if (this.props.me.points_available < 100) {
+            return true;
+        }
         if (type === "frame_color") {
             return (this.props.me.frame_collection && this.props.me.frame_collection.includes(color));
         } else { // type == "name_color"
