@@ -23,10 +23,10 @@ class Classroom extends Component {
                     return o2.ranking || 0 - o1.ranking || 0;
                 }).map((student) =>
                     <div className="StudentListView" key={student.name} style={{backgroundColor: student.frame_color}}>
-                        <span className="Stats">{`${student.ranking}. `}</span>
+                        <span className="Stats" style={{color: (student.frame_color === 'Black' ? "White" : "Black")}}>{`${student.ranking}. `}</span>
                         <span className="Stats" style={{color: student.name_color}}>{student.name}</span>
-                        <span className="Stats">{" " + student.total_points}</span>
-                        <span className="Stats">{" " + this.getBadges(student)}</span>
+                        <span className="Stats" style={{color: (student.frame_color === 'Black' ? "White" : "Black")}}>{" " + student.total_points}</span>
+                        <span className="Stats" style={{color: (student.frame_color === 'Black' ? "White" : "Black")}}>{" " + this.getBadges(student)}</span>
                     </div>
                 )}
             </div>
