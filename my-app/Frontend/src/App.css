@@ -36,10 +36,14 @@
   color: #61dafb;
 }
 
+.navigation-bar {
+  background-color: rgb(255, 229, 189);
+}
+
 .navigation-bar button {
   color: #000000;
   padding: 5px;
-  margin: 5px;
+  margin: 8px;
   font-size: 24px;
   border-radius: 8px;
   background-color: #ffffff;
@@ -51,6 +55,18 @@
 
 .navigation-bar button.selected {
   background-color: #61dafb;
+}
+
+.Classroom {
+  margin: 8px;
+}
+
+.StudentListView {
+  margin: 8px;
+  padding:5px;
+  border-radius: 5px;
+  color: #000000;
+  background-color: rgb(199, 194, 194);
 }
 
 @keyframes App-logo-spin {

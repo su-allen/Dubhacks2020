@@ -16,8 +16,27 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      contentType: this.contentStates.HOME
+      contentType: this.contentStates.HOME,
+      students: this.getStudents(),
     }
+  }
+
+  getStudents = () => {
+    // TODO: get request to get list of students in classroom
+    return [
+      {
+        name: "Bob Ross",
+        ranking: 1,
+        total_points: 500,
+        badges: null, 
+      },
+      {
+        name: "Roy Liu",
+        ranking: 2,
+        total_points: 66,
+        badges: ["℗", "♫"], 
+      }
+    ];
   }
 
   viewHome = () => {
@@ -60,7 +79,7 @@ class App extends Component {
           <Profile />
         </div>
         <div className={this.state.contentType === this.contentStates.CLASSROOM ? "show" : "hide"}>
-          <Classroom />
+          <Classroom students={this.state.students}/>
         </div>
         <div className={this.state.contentType === this.contentStates.SHOP ? "show" : "hide"}>
           <Shop />
