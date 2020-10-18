@@ -7,6 +7,7 @@ class Classroom extends Component {
     }
 
     getBadges = (student) => {
+        console.log(student.frame_color)
         let out = "";
         if (student.badges) {
             student.badges.forEach(badge => {
@@ -23,11 +24,11 @@ class Classroom extends Component {
                 {this.props.students.sort((o1, o2) => {
                     return o2.ranking || 0 - o1.ranking || 0;
                 }).map((student) =>
-                    <div className="StudentListView" key={student.name}>
-                        <span className="ranking">{`${student.ranking}. `}</span>
-                        <span className="username">{student.name}</span>
-                        <span className="score">{" " + student.total_points}</span>
-                        <span className="badges">{" " + this.getBadges(student)}</span>
+                    <div className="StudentListView" key={student.name} style={{backgroundColor: student.frame_color}}>
+                        <span className="Stats">{`${student.ranking}. `}</span>
+                        <span className="Stats" style={{color: student.name_color}}>{student.name}</span>
+                        <span className="Stats">{" " + student.total_points}</span>
+                        <span className="Stats">{" " + this.getBadges(student)}</span>
                     </div>
                 )}
             </div>
